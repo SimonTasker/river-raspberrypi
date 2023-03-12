@@ -17,7 +17,7 @@ RUN mkdir ~/temp && cd ~/temp \
     && tar -zxf cmake-3.25.0.tar.gz \
     && cd cmake-3.25.0 \
     && ./bootstrap \
-    && make \
+    && make -j 12\
     && make install
 RUN cd ~ && rm -rf temp/
 RUN pip install numpy
